@@ -1,5 +1,10 @@
 cmake_minimum_required(VERSION 3.1)
-project(assignment2)
+project(assignment3)
+
+if(NOT CMAKE_BUILD_TYPE)
+	message(STATUS "No build type selected, default to Release")
+	set(CMAKE_BUILD_TYPE "Release")
+endif()
 
 # Project sources
 add_executable(${PROJECT_NAME}
@@ -7,7 +12,7 @@ add_executable(${PROJECT_NAME}
 	src/utils.h
 )
 
-# Include Eigen for linear algebra, stb and gif-h to export images
+# Include Eigen for linear algebra
 target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../ext/eigen" "${CMAKE_CURRENT_SOURCE_DIR}/../ext/stb" "${CMAKE_CURRENT_SOURCE_DIR}/../ext/gif-h")
 
 # Use C++11 version of the standard
