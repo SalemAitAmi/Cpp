@@ -7,4 +7,4 @@
 - mkdir build
 - cd build
 - cmake -DCMAKE_BUILD_TYPE=Debug .. (If too slow, replace Debug with Release)
-- ./<<executable>>
+- ./executable
